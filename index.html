@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV - Technicien Supérieur Systèmes & Réseaux</title>
+
+<!-- Icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
 *{
@@ -16,6 +19,7 @@
 body{
     color:white;
     overflow-x:hidden;
+    background:black;
 }
 
 .background{
@@ -23,7 +27,7 @@ body{
     width:100%;
     height:100%;
     background:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f') no-repeat center center/cover;
-    filter:brightness(0.2);
+    filter:brightness(0.18);
     z-index:-2;
 }
 
@@ -42,7 +46,7 @@ canvas{
 
 .header{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
 
 .profile-pic{
@@ -51,14 +55,8 @@ canvas{
     border-radius:50%;
     object-fit:cover;
     border:4px solid #00ff88;
-    box-shadow:0 0 25px #00ff88;
+    box-shadow:0 0 30px #00ff88;
     margin-bottom:20px;
-    transition:0.4s;
-}
-
-.profile-pic:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 40px #00ff88;
 }
 
 .header h1{
@@ -74,27 +72,39 @@ canvas{
 }
 
 .tagline{
-    margin-top:20px;
+    margin-top:25px;
     font-size:1.2em;
-    max-width:800px;
+    max-width:850px;
     margin-left:auto;
     margin-right:auto;
+    padding:20px;
+    background:rgba(0,255,136,0.08);
+    border-left:4px solid #00ff88;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,255,136,0.3);
 }
 
 .card{
-    background:rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.06);
     backdrop-filter:blur(15px);
     border-radius:20px;
     padding:30px;
     margin-bottom:30px;
-    box-shadow:0 0 30px rgba(0,255,0,0.25);
+    border:1px solid rgba(0,255,136,0.3);
+    box-shadow:0 0 25px rgba(0,255,136,0.15);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 40px rgba(0,255,136,0.5);
+    border:1px solid #00ff88;
 }
 
 .card h3{
     margin-bottom:20px;
     color:#00ff88;
-    border-bottom:1px solid rgba(0,255,0,0.3);
-    padding-bottom:10px;
+    font-size:1.4em;
 }
 
 ul{
@@ -102,18 +112,29 @@ ul{
 }
 
 ul li{
-    margin-bottom:12px;
-    line-height:1.5;
+    margin-bottom:14px;
+    line-height:1.6;
+}
+
+ul li i{
+    color:#00ff88;
+    margin-right:10px;
 }
 
 .conclusion{
     text-align:center;
-    margin-top:40px;
-    font-size:1.2em;
-    padding:25px;
-    background:rgba(0,255,136,0.1);
+    margin-top:50px;
+    font-size:1.3em;
+    font-weight:500;
+    padding:30px;
+    background:linear-gradient(45deg, rgba(0,255,136,0.15), rgba(0,255,136,0.05));
     border-radius:15px;
-    box-shadow:0 0 20px rgba(0,255,136,0.3);
+    box-shadow:0 0 30px rgba(0,255,136,0.4);
+    border:1px solid #00ff88;
+}
+
+.contact p{
+    margin-bottom:8px;
 }
 </style>
 </head>
@@ -125,69 +146,73 @@ ul li{
 
 <div class="container">
 
-    <div class="header">
-        <img src="photo.jpg" alt="Photo de profil" class="profile-pic">
+<div class="header">
+    <img src="photo.jpg" alt="Photo de profil" class="profile-pic">
+    <h1>Ahcene Khelifi</h1>
+    <h2>Technicien Supérieur Systèmes & Réseaux</h2>
 
-        <h1>Ahcene Khelifi</h1>
-        <h2>Technicien Supérieur Systèmes & Réseaux</h2>
-
-        <p class="tagline">
-            Spécialiste en administration systèmes et infrastructures réseau, 
-            j’assure la performance, la sécurité et la continuité des environnements informatiques professionnels.
-        </p>
+    <div class="tagline">
+        Spécialiste en administration systèmes et infrastructures réseau, 
+        je garantis la performance, la sécurité et la continuité des environnements informatiques professionnels.
     </div>
+</div>
 
-    <div class="card">
-        <h3>Compétences Systèmes</h3>
-        <ul>
-            <li><strong>Administration Windows Server :</strong> Installation, configuration et gestion des rôles (AD DS, DNS, DHCP).</li>
-            <li><strong>Active Directory :</strong> Gestion des utilisateurs, groupes, OU, GPO et droits d’accès.</li>
-            <li><strong>Gestion des postes clients :</strong> Déploiement, intégration au domaine et maintenance Windows 10/11.</li>
-            <li><strong>Support technique :</strong> Diagnostic et résolution d’incidents matériels et logiciels (N1/N2).</li>
-        </ul>
-    </div>
+<div class="card">
+<h3><i class="fa-solid fa-server"></i> Compétences Systèmes</h3>
+<ul>
+<li><i class="fa-solid fa-network-wired"></i><strong> Windows Server :</strong> Installation, configuration et administration des rôles AD DS, DNS et DHCP.</li>
+<li><i class="fa-solid fa-users"></i><strong> Active Directory :</strong> Gestion des utilisateurs, groupes, unités organisationnelles et stratégies GPO.</li>
+<li><i class="fa-solid fa-desktop"></i><strong> Postes clients :</strong> Déploiement, intégration au domaine et maintenance Windows 10/11.</li>
+<li><i class="fa-solid fa-headset"></i><strong> Support technique :</strong> Diagnostic et résolution des incidents matériels et logiciels (N1/N2).</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h3>Virtualisation & Infrastructure</h3>
-        <ul>
-            <li><strong>VMware vSphere :</strong> ESXi, vCenter, déploiement et gestion des VM.</li>
-            <li><strong>Haute disponibilité :</strong> vMotion, snapshots, sauvegardes et restauration.</li>
-            <li><strong>Optimisation ressources :</strong> Gestion CPU, RAM et stockage.</li>
-            <li><strong>Stockage NAS :</strong> RAID (0,1,5,10), NFS et SMB/CIFS.</li>
-        </ul>
-    </div>
+<div class="card">
+<h3><i class="fa-solid fa-cloud"></i> Virtualisation & Infrastructure</h3>
+<ul>
+<li><i class="fa-solid fa-layer-group"></i><strong> VMware vSphere :</strong> Gestion ESXi, vCenter et déploiement de machines virtuelles.</li>
+<li><i class="fa-solid fa-arrows-rotate"></i><strong> Haute disponibilité :</strong> vMotion, snapshots, sauvegardes et restauration.</li>
+<li><i class="fa-solid fa-microchip"></i><strong> Optimisation ressources :</strong> Gestion CPU, RAM et stockage.</li>
+<li><i class="fa-solid fa-database"></i><strong> Stockage NAS :</strong> Configuration RAID (0,1,5,10), NFS et SMB/CIFS.</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h3>Réseaux & Sécurité</h3>
-        <ul>
-            <li><strong>Équipements Cisco :</strong> Configuration switch, routeur, VLAN et routage inter-VLAN.</li>
-            <li><strong>Segmentation réseau :</strong> Mise en place de VLAN sécurisés.</li>
-            <li><strong>Firewall :</strong> Gestion des règles de filtrage et sécurisation des accès.</li>
-            <li><strong>Wi-Fi professionnel :</strong> Installation et configuration points d’accès.</li>
-            <li><strong>Périphériques réseau :</strong> Imprimantes et caméras IP.</li>
-        </ul>
-    </div>
+<div class="card">
+<h3><i class="fa-solid fa-shield-halved"></i> Réseaux & Sécurité</h3>
+<ul>
+<li><i class="fa-solid fa-ethernet"></i><strong> Cisco :</strong> Configuration switches, routeurs, VLAN et routage inter-VLAN.</li>
+<li><i class="fa-solid fa-diagram-project"></i><strong> Segmentation :</strong> Mise en place VLAN sécurisés et optimisation trafic.</li>
+<li><i class="fa-solid fa-fire"></i><strong> Firewall :</strong> Configuration règles de filtrage et sécurisation accès.</li>
+<li><i class="fa-solid fa-wifi"></i><strong> Infrastructure réseau :</strong> Installation Wi-Fi, imprimantes et caméras IP.</li>
+</ul>
+</div>
 
-    <div class="card">
-        <h3>Linux</h3>
-        <ul>
-            <li><strong>Red Hat / Debian :</strong> Installation et configuration services réseau.</li>
-            <li><strong>Administration système :</strong> Gestion utilisateurs, permissions et services.</li>
-        </ul>
-    </div>
+<div class="card">
+<h3><i class="fa-brands fa-linux"></i> Linux</h3>
+<ul>
+<li><i class="fa-solid fa-terminal"></i><strong> Red Hat / Debian :</strong> Installation, gestion utilisateurs, permissions et services réseau.</li>
+</ul>
+</div>
 
-    <div class="conclusion">
-        Professionnel rigoureux, autonome et orienté résultats, 
-        je m’engage à garantir la fiabilité, la sécurité et l’évolution 
-        de votre infrastructure informatique avec sérieux et efficacité.
-    </div>
+<div class="conclusion">
+    Technicien engagé, méthodique et orienté résultats, 
+    je m'investis pleinement pour assurer la fiabilité, la sécurité 
+    et l’évolution continue de votre infrastructure informatique.
+</div>
+
+<div class="card contact">
+<h3><i class="fa-solid fa-address-card"></i> Contact</h3>
+<p><i class="fa-solid fa-envelope"></i> khelifi.ahcene@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> 06 62 68 59 71</p>
+<p><i class="fa-solid fa-location-dot"></i> Denain</p>
+<p><i class="fa-solid fa-id-card"></i> Permis B</p>
+</div>
 
 </div>
 
 <script>
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
-
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
@@ -197,35 +222,25 @@ const columns = canvas.width / fontSize;
 const drops = [];
 
 for (let x = 0; x < columns; x++)
-    drops[x] = 1;
+drops[x] = 1;
 
 function draw(){
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle = "#00ff88";
+ctx.font = fontSize + "px monospace";
 
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i=0;i<drops.length;i++){
-        const text = letters[Math.floor(Math.random()*letters.length)];
-        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
-
-        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
-            drops[i] = 0;
-
-        drops[i]++;
-    }
+for(let i=0;i<drops.length;i++){
+const text = letters[Math.floor(Math.random()*letters.length)];
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+drops[i] = 0;
+drops[i]++;
+}
 }
 
 setInterval(draw,33);
-
-window.addEventListener("resize",()=>{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
 </script>
 
 </body>
-
 </html>
-
