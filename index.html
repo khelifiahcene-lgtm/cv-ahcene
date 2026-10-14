@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahcéne KHELIFI - Administrateur systèmes et réseaux</title>
+    
+    <!-- Ajout de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* Style global typique d'un terminal/Matrix */
         body {
@@ -72,6 +76,16 @@
             border-left: 4px solid #0f0;
             margin-top: 15px;
         }
+
+        /* Style spécifique pour les icônes */
+        i {
+            margin-right: 8px;
+            color: #0f0; /* Les icônes seront en vert Matrix */
+        }
+        
+        h3 i {
+            color: #fff; /* Les icônes des titres en blanc pour s'accorder au texte */
+        }
     </style>
 </head>
 <body>
@@ -87,35 +101,35 @@
                 <img src="photo.jpg" alt="Photo de profil de Ahcéne KHELIFI" class="profile-photo">
                 
                 <h1>Ahcéne KHELIFI</h1>
-                <h2>Administrateur systèmes et réseaux en alternance</h2>
-                <p><strong>Contact :</strong> khelifi.ahcene@gmail.com | 06 62 68 59 71</p>
-                <p><strong>Localisation :</strong> 59220 Denain (Mobilité : Valenciennois, Douaisis, Lille et périphéries)</p>
-                <p><strong>Informations :</strong> Permis B | Travailleur handicapé</p>
+                <h2><i class="fas fa-terminal"></i>Administrateur systèmes et réseaux en alternance</h2>
+                <p><strong><i class="fas fa-envelope"></i>Contact :</strong> khelifi.ahcene@gmail.com | <strong><i class="fas fa-phone"></i></strong>06 62 68 59 71</p>
+                <p><strong><i class="fas fa-map-marker-alt"></i>Localisation :</strong> 59220 Denain (Mobilité : Valenciennois, Douaisis, Lille et périphéries)</p>
+                <p><strong><i class="fas fa-info-circle"></i>Informations :</strong> <i class="fas fa-car"></i>Permis B | <i class="fas fa-wheelchair"></i>Travailleur handicapé</p>
             </div>
         </header>
 
         <section id="a-propos">
-            <h3>À propos de moi</h3>
+            <h3><i class="fas fa-user-astronaut"></i>À propos de moi</h3>
             <p>Diplômé du Titre Professionnel TSSR et admis au Bachelor Administrateur Systèmes et Réseaux au CESI d'Arras, je recherche une alternance pour mettre en pratique mes compétences techniques. Mon ancienne carrière dans la sécurité de sites sensibles m'a forgé une grande rigueur, une gestion du stress optimale et le respect strict des protocoles. Je suis aujourd'hui capable de concevoir, déployer et maintenir une infrastructure informatique sécurisée.</p>
         </section>
 
         <section id="competences">
-            <h3>Compétences Techniques</h3>
+            <h3><i class="fas fa-cogs"></i>Compétences Techniques</h3>
             <ul>
-                <li><strong>Administration Linux :</strong> Debian/Ubuntu/Red Hat/Mint, gestion des utilisateurs, permissions, services système, accès SSH.</li>
-                <li><strong>Administration Windows :</strong> Windows Server, Active Directory, gestion des comptes utilisateurs, groupes, GPO.</li>
-                <li><strong>Réseaux :</strong> TCP/IP, adressage IP, subnetting, VLAN, routage, DNS, DHCP.</li>
-                <li><strong>Administration Postes Clients :</strong> Installation, configuration, maintenance (Windows), déploiement de logiciels, dépannage.</li>
-                <li><strong>Virtualisation :</strong> VMware, VirtualBox.</li>
-                <li><strong>Support et Maintenance :</strong> Résolution de dysfonctionnements matériels/logiciels, assistance utilisateurs.</li>
+                <li><strong><i class="fab fa-linux"></i>Administration Linux :</strong> Debian/Ubuntu/Red Hat/Mint, gestion des utilisateurs, permissions, services système, accès SSH.</li>
+                <li><strong><i class="fab fa-windows"></i>Administration Windows :</strong> Windows Server, Active Directory, gestion des comptes utilisateurs, groupes, GPO.</li>
+                <li><strong><i class="fas fa-network-wired"></i>Réseaux :</strong> TCP/IP, adressage IP, subnetting, VLAN, routage, DNS, DHCP.</li>
+                <li><strong><i class="fas fa-desktop"></i>Administration Postes Clients :</strong> Installation, configuration, maintenance (Windows), déploiement de logiciels, dépannage.</li>
+                <li><strong><i class="fas fa-server"></i>Virtualisation :</strong> VMware, VirtualBox.</li>
+                <li><strong><i class="fas fa-tools"></i>Support et Maintenance :</strong> Résolution de dysfonctionnements matériels/logiciels, assistance utilisateurs.</li>
             </ul>
         </section>
 
         <section id="projets">
-            <h3>Projet Technique Réalisé</h3>
+            <h3><i class="fas fa-project-diagram"></i>Projet Technique Réalisé</h3>
             <div class="projet">
                 <h4>Conception et Déploiement d'une Infrastructure PME Virtualisée</h4>
-                <p><em>Dans le cadre de la validation TSSR | Décembre 2025 - Février 2026</em></p>
+                <p><em><i class="far fa-calendar-alt"></i>Dans le cadre de la validation TSSR | Décembre 2025 - Février 2026</em></p>
                 <ul>
                     <li><strong>Architecture & Virtualisation :</strong> Déploiement d'une architecture de virtualisation imbriquée via VMware ESXi.</li>
                     <li><strong>Sécurité & Réseaux :</strong> Sécurisation du réseau local et segmentation des flux (LAN/WAN) avec pfSense.</li>
@@ -126,13 +140,13 @@
         </section>
 
         <section id="formations">
-            <h3>Diplômes et Formations</h3>
+            <h3><i class="fas fa-graduation-cap"></i>Diplômes et Formations</h3>
             <ul>
                 <li><strong>Bachelor Administrateur Systèmes et Réseaux</strong> - CESI Arras <em>(Oct. 2026 - Oct. 2027)</em></li>
                 <li><strong>Titre Professionnel TSSR</strong> - ZLI Engineering Lille <em>(Sept. 2025 - Fév. 2026)</em></li>
                 <li><strong>Diplôme d'Architecte</strong> - Université Tizi Ouzou, Algérie <em>(2009)</em></li>
             </ul>
-            <h4>Formations Complémentaires</h4>
+            <h4><i class="fas fa-certificate"></i>Formations Complémentaires</h4>
             <ul>
                 <li><strong>Certification Google AI Fundamentals</strong> - Coursera <em>(Oct. 2026)</em></li>
                 <li><strong>Google IT Support Professional Certificate</strong> - Coursera <em>(En cours, 2026)</em></li>
@@ -140,7 +154,7 @@
         </section>
 
         <section id="experiences">
-            <h3>Expériences Professionnelles</h3>
+            <h3><i class="fas fa-briefcase"></i>Expériences Professionnelles</h3>
             <ul>
                 <li>
                     <strong>Agent de sécurité</strong> - Palais de Justice Douai <em>(2022 - 2026)</em><br>
