@@ -4,89 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahcéne KHELIFI - Administrateur systèmes et réseaux</title>
-    <!-- Vous pouvez conserver le lien vers votre fichier CSS actuel ici -->
-    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Style global typique d'un terminal/Matrix */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            color: #0f0; /* Vert Matrix par défaut */
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        /* Canvas pour la pluie Matrix en arrière-plan */
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        /* Conteneur principal pour le texte (semi-transparent) */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85); /* Fond très sombre et un peu transparent */
+            border: 1px solid #0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        /* En-tête et Photo de profil */
+        .profile-header {
+            text-align: center;
+            border-bottom: 2px dashed #0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0f0;
+            box-shadow: 0 0 15px #0f0;
+            margin-bottom: 15px;
+        }
+
+        h1 { color: #fff; text-shadow: 0 0 10px #0f0; font-size: 2.5em; margin-bottom: 5px; }
+        h2 { color: #0f0; font-size: 1.5em; margin-top: 0; }
+        h3 { color: #fff; border-bottom: 1px solid #0f0; padding-bottom: 5px; text-transform: uppercase; letter-spacing: 2px;}
+        h4 { color: #0f0; margin-bottom: 5px; }
+        
+        p, li { line-height: 1.6; color: #d3ffd3; }
+        strong { color: #fff; }
+        
+        ul { list-style-type: square; }
+        
+        .projet {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border-left: 4px solid #0f0;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- EN-TÊTE DU CV -->
-    <header>
-        <div class="profile-header">
-            <h1>Ahcéne KHELIFI</h1>
-            <h2>Administrateur systèmes et réseaux en alternance</h2>
-            <p><strong>Contact :</strong> khelifi.ahcene@gmail.com | 06 62 68 59 71</p>
-            <p><strong>Localisation :</strong> 59220 Denain (Mobilité : Valenciennois, Douaisis, Lille et périphéries)</p>
-            <p><strong>Informations :</strong> Permis B | Travailleur handicapé</p>
-        </div>
-    </header>
+    <!-- ANIMATION MATRIX EN ARRIÈRE-PLAN -->
+    <canvas id="matrix-canvas"></canvas>
 
-    <!-- PRÉSENTATION -->
-    <section id="a-propos">
-        <h3>À propos de moi</h3>
-        <p>Diplômé du Titre Professionnel TSSR et admis au Bachelor Administrateur Systèmes et Réseaux au CESI d'Arras, je recherche une alternance pour mettre en pratique mes compétences techniques. Mon ancienne carrière dans la sécurité de sites sensibles m'a forgé une grande rigueur, une gestion du stress optimale et le respect strict des protocoles. Je suis aujourd'hui capable de concevoir, déployer et maintenir une infrastructure informatique sécurisée.</p>
-    </section>
+    <!-- CONTENU DU CV -->
+    <div class="content-wrapper">
+        <header>
+            <div class="profile-header">
+                <!-- Intégration de la photo -->
+                <img src="photo.jpg" alt="Photo de profil de Ahcéne KHELIFI" class="profile-photo">
+                
+                <h1>Ahcéne KHELIFI</h1>
+                <h2>Administrateur systèmes et réseaux en alternance</h2>
+                <p><strong>Contact :</strong> khelifi.ahcene@gmail.com | 06 62 68 59 71</p>
+                <p><strong>Localisation :</strong> 59220 Denain (Mobilité : Valenciennois, Douaisis, Lille et périphéries)</p>
+                <p><strong>Informations :</strong> Permis B | Travailleur handicapé</p>
+            </div>
+        </header>
 
-    <!-- COMPÉTENCES TECHNIQUES -->
-    <section id="competences">
-        <h3>Compétences Techniques</h3>
-        <ul>
-            <li><strong>Administration Linux :</strong> Debian/Ubuntu/Red Hat/Mint, gestion des utilisateurs, permissions, services système, accès SSH.</li>
-            <li><strong>Administration Windows :</strong> Windows Server, Active Directory, gestion des comptes utilisateurs, groupes, GPO.</li>
-            <li><strong>Réseaux :</strong> TCP/IP, adressage IP, subnetting, VLAN, routage, DNS, DHCP.</li>
-            <li><strong>Administration Postes Clients :</strong> Installation, configuration, maintenance (Windows), déploiement de logiciels, dépannage.</li>
-            <li><strong>Virtualisation :</strong> VMware, VirtualBox.</li>
-            <li><strong>Support et Maintenance :</strong> Résolution de dysfonctionnements matériels/logiciels, assistance utilisateurs.</li>
-        </ul>
-    </section>
+        <section id="a-propos">
+            <h3>À propos de moi</h3>
+            <p>Diplômé du Titre Professionnel TSSR et admis au Bachelor Administrateur Systèmes et Réseaux au CESI d'Arras, je recherche une alternance pour mettre en pratique mes compétences techniques. Mon ancienne carrière dans la sécurité de sites sensibles m'a forgé une grande rigueur, une gestion du stress optimale et le respect strict des protocoles. Je suis aujourd'hui capable de concevoir, déployer et maintenir une infrastructure informatique sécurisée.</p>
+        </section>
 
-    <!-- PROJET TECHNIQUE -->
-    <section id="projets">
-        <h3>Projet Technique Réalisé</h3>
-        <div class="projet">
-            <h4>Conception et Déploiement d'une Infrastructure PME Virtualisée</h4>
-            <p><em>Dans le cadre de la validation TSSR | Décembre 2025 - Février 2026</em></p>
+        <section id="competences">
+            <h3>Compétences Techniques</h3>
             <ul>
-                <li><strong>Architecture & Virtualisation :</strong> Déploiement d'une architecture de virtualisation imbriquée via VMware ESXi.</li>
-                <li><strong>Sécurité & Réseaux :</strong> Sécurisation du réseau local et segmentation des flux (LAN/WAN) avec pfSense.</li>
-                <li><strong>Administration Système :</strong> Environnement Windows Server complet (AD DS, rôles DNS/DHCP, GPO).</li>
-                <li><strong>Services Réseau :</strong> Intégration d'un serveur Web Linux (Apache) et d'un NAS (OpenMediaVault).</li>
+                <li><strong>Administration Linux :</strong> Debian/Ubuntu/Red Hat/Mint, gestion des utilisateurs, permissions, services système, accès SSH.</li>
+                <li><strong>Administration Windows :</strong> Windows Server, Active Directory, gestion des comptes utilisateurs, groupes, GPO.</li>
+                <li><strong>Réseaux :</strong> TCP/IP, adressage IP, subnetting, VLAN, routage, DNS, DHCP.</li>
+                <li><strong>Administration Postes Clients :</strong> Installation, configuration, maintenance (Windows), déploiement de logiciels, dépannage.</li>
+                <li><strong>Virtualisation :</strong> VMware, VirtualBox.</li>
+                <li><strong>Support et Maintenance :</strong> Résolution de dysfonctionnements matériels/logiciels, assistance utilisateurs.</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <!-- DIPLÔMES ET FORMATIONS -->
-    <section id="formations">
-        <h3>Diplômes et Formations</h3>
-        <ul>
-            <li><strong>Bachelor Administrateur Systèmes et Réseaux</strong> - CESI Arras <em>(Oct. 2026 - Oct. 2027)</em></li>
-            <li><strong>Titre Professionnel TSSR</strong> - ZLI Engineering Lille <em>(Sept. 2025 - Fév. 2026)</em></li>
-            <li><strong>Diplôme d'Architecte</strong> - Université Tizi Ouzou, Algérie <em>(2009)</em></li>
-        </ul>
-        <h4>Formations Complémentaires</h4>
-        <ul>
-            <li><strong>Certification Google AI Fundamentals</strong> - Coursera <em>(Oct. 2026)</em></li>
-            <li><strong>Google IT Support Professional Certificate</strong> - Coursera <em>(En cours, 2026)</em></li>
-        </ul>
-    </section>
+        <section id="projets">
+            <h3>Projet Technique Réalisé</h3>
+            <div class="projet">
+                <h4>Conception et Déploiement d'une Infrastructure PME Virtualisée</h4>
+                <p><em>Dans le cadre de la validation TSSR | Décembre 2025 - Février 2026</em></p>
+                <ul>
+                    <li><strong>Architecture & Virtualisation :</strong> Déploiement d'une architecture de virtualisation imbriquée via VMware ESXi.</li>
+                    <li><strong>Sécurité & Réseaux :</strong> Sécurisation du réseau local et segmentation des flux (LAN/WAN) avec pfSense.</li>
+                    <li><strong>Administration Système :</strong> Environnement Windows Server complet (AD DS, rôles DNS/DHCP, GPO).</li>
+                    <li><strong>Services Réseau :</strong> Intégration d'un serveur Web Linux (Apache) et d'un NAS (OpenMediaVault).</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- EXPÉRIENCES PROFESSIONNELLES -->
-    <section id="experiences">
-        <h3>Expériences Professionnelles</h3>
-        <ul>
-            <li>
-                <strong>Agent de sécurité</strong> - Palais de Justice Douai <em>(2022 - 2026)</em><br>
-                Sécurisation des accès et des personnes, respect de la confidentialité et des procédures légales.
-            </li>
-            <li>
-                <strong>Agent de sécurité privée / référent sûreté</strong> - LME Trith-Saint-Léger <em>(2018 - 2022)</em><br>
-                Gestion des risques, contrôle, continuité, gestion de crise.
-            </li>
-            <li>
-                <strong>Architecte</strong> - Cabinet d'architecture Algérie <em>(2014)</em><br>
-                Conception de plans, structuration de projets, suivi de chantiers.
-            </li>
-        </ul>
-    </section>
+        <section id="formations">
+            <h3>Diplômes et Formations</h3>
+            <ul>
+                <li><strong>Bachelor Administrateur Systèmes et Réseaux</strong> - CESI Arras <em>(Oct. 2026 - Oct. 2027)</em></li>
+                <li><strong>Titre Professionnel TSSR</strong> - ZLI Engineering Lille <em>(Sept. 2025 - Fév. 2026)</em></li>
+                <li><strong>Diplôme d'Architecte</strong> - Université Tizi Ouzou, Algérie <em>(2009)</em></li>
+            </ul>
+            <h4>Formations Complémentaires</h4>
+            <ul>
+                <li><strong>Certification Google AI Fundamentals</strong> - Coursera <em>(Oct. 2026)</em></li>
+                <li><strong>Google IT Support Professional Certificate</strong> - Coursera <em>(En cours, 2026)</em></li>
+            </ul>
+        </section>
 
+        <section id="experiences">
+            <h3>Expériences Professionnelles</h3>
+            <ul>
+                <li>
+                    <strong>Agent de sécurité</strong> - Palais de Justice Douai <em>(2022 - 2026)</em><br>
+                    Sécurisation des accès et des personnes, respect de la confidentialité et des procédures légales.
+                </li>
+                <li>
+                    <strong>Agent de sécurité privée / référent sûreté</strong> - LME Trith-Saint-Léger <em>(2018 - 2022)</em><br>
+                    Gestion des risques, contrôle, continuité, gestion de crise.
+                </li>
+                <li>
+                    <strong>Architecte</strong> - Cabinet d'architecture Algérie <em>(2014)</em><br>
+                    Conception de plans, structuration de projets, suivi de chantiers.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- SCRIPT POUR LA PLUIE MATRIX -->
+    <script>
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Met le canvas en plein écran
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Caractères utilisés pour l'effet Matrix
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()*&^%+-/~{[|`]}';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        // Un tableau pour les gouttes d'eau (une par colonne)
+        const drops = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        // Fonction pour dessiner les caractères
+        function draw() {
+            // Fond noir semi-transparent pour créer l'effet de traînée
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0'; // Texte vert
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                
+                // Dessine le caractère
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                // Réinitialise la goutte en haut de l'écran aléatoirement
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                // Fait descendre la goutte
+                drops[i]++;
+            }
+        }
+
+        // Anime le tout
+        setInterval(draw, 33);
+
+        // Ajuste la taille du canvas si la fenêtre est redimensionnée
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 </html>
